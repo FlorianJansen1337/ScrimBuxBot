@@ -1,0 +1,20 @@
+{
+  "name": "scrimbuxbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FlorianJansen1337",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "8.2.0",
+    "cron": "1.8.2"
+  },
+  "devDependencies": {
+    "@types/cron": "^1.7.2",
+    "@types/node": "^14.14.10"
+  }
+}
