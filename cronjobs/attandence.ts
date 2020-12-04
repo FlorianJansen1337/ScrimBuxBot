@@ -11,8 +11,7 @@ export const attandence = function (client: Client) {
     contracts.forEach((contract: Contract) => {
         scrims = {
             ...scrims,
-            [contract.userID]: new CronJob(`* * * * *`, function () {
-                // [contract.userID]: new CronJob(`5 ${contract.starHour} * * *`, function () {
+            [contract.userID]: new CronJob(`5 ${contract.starHour} * * *`, function () {
                 checkIfInVoice(contract, client);
             }, null, true, 'Europe/Berlin')
         }
