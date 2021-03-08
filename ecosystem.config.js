@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = [
     {
         name: "ScrimBuxBot",
-        script: "./index.ts",
-        watch: "./*"
+        script: "./src/index.ts",
+        watch: "./src"
     }
 ]
