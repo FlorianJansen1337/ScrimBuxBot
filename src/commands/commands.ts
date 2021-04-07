@@ -2,7 +2,7 @@ import { Message } from 'discord.js';
 import * as fs from 'fs';
 
 export const commands = function (msg: Message, args: string[]) {
-    let commandList = fs.readdirSync(process.cwd() + '/commands');
+    let commandList = fs.readdirSync(process.cwd() + './commands');
     commandList = commandList.map(item => item.split('.')[0])
     return msg.channel.send(commandList)
 }

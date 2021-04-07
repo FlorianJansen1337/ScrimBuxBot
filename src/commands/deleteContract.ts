@@ -1,7 +1,7 @@
-import { Contract } from './../helper/types';
+import { Contract } from '../helper/types';
 import { Message } from 'discord.js';
 import * as fs from 'fs';
-const contracts = require('../data/contracts.json') as Contract[];
+const contracts = require('../../data/contracts.json') as Contract[];
 
 export const deletecontract = function (msg: Message, args: string[]) {
     const user = msg.mentions!.users!.first();

@@ -1,8 +1,8 @@
 import { CronJob } from 'cron';
 import { Balance, Contract } from "../helper/types";
 import * as fs from 'fs';
-const contracts = require('../data/contracts.json') as Contract[];
-const balances = require('../data/balances.json') as Balance[];
+const contracts = require('../../data/contracts.json') as Contract[];
+const balances = require('../../data/balances.json') as Balance[];
 
 export const monthly = new CronJob('0 0 1 * *', function () {
     payOutWage();
@@ -14,7 +14,7 @@ const payOutWage = () => {
     contracts.forEach((contract: Contract) => {
         let balanceIndex = balances.findIndex((item: Balance) => item.userID === contract.userID)
         if (balanceIndex > -1)
-            balances.find((item: Balance) => item.userID === contract.userID).amount += contract.paycheck.wage;
+            balances.find((item: Balance) => item.userID === contract.userID)!.amount += contract.paycheck.wage;
         else
             balances.push({ userID: contract.userID, amount: contract.paycheck.wage } as Balance)
     });

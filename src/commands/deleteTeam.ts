@@ -1,7 +1,7 @@
 import { Message } from 'discord.js';
-import { Team } from './../helper/types';
+import { Team } from '../helper/types';
 import * as fs from 'fs';
-const teams = require('../data/teams.json') as Team[];
+const teams = require('../../data/teams.json') as Team[];
 
 export const deleteteam = function (msg: Message, args: string[]) {
     const teamMention = msg.mentions!.roles!.first();

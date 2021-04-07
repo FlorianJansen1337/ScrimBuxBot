@@ -1,7 +1,7 @@
 import { Message } from 'discord.js';
 import { Contract } from '../helper/types';
 import * as fs from 'fs';
-const contracts = require('../data/contracts.json') as Contract[];
+const contracts = require('../../data/contracts.json') as Contract[];
 
 export const addcontract = function (msg: Message, args: string[]) {
     const user = msg.mentions!.users!.first();
