@@ -2,16 +2,22 @@
   "name": "scrimbuxbot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm run build",
+    "prebuild": "rimraf ./build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/index.js"
   },
   "author": "FlorianJansen1337",
   "license": "MIT",
   "dependencies": {
+    "cron": "1.8.2",
     "discord.js": "^12.5.1",
     "dotenv": "8.2.0",
-    "cron": "1.8.2"
+    "rimraf": "3.0.2",
+    "typescript": "^4.2.3"
   },
   "devDependencies": {
     "@types/cron": "^1.7.2",
